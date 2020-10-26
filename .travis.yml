@@ -20,9 +20,14 @@ notifications:
     recipients:
       - rokmctkd6@gmail.com
 
+before_deploy:
+  - zip -r springboot-webservice-study *
+  - mkdir -p deploy
+  - mv springboot-webservice-study.zip deploy/springboot-webservice-study.zip
 
 deploy:
   - provider: s3
+    local_dir: deploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: springboot-webservice-deploystudy # 6-3-3에서 생성한 S3 버킷
