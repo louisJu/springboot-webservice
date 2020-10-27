@@ -18,7 +18,7 @@ script: "./gradlew clean build"
 notifications:
   email:
     recipients:
-      - rokmctkd6@gmail.com
+      - devjlouis@gmail.com
 
 before_deploy:
   - zip -r springboot-webservice-study *
