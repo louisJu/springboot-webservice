@@ -28,8 +28,8 @@ before_deploy:
 deploy:
   - provider: s3
     local_dir: deploy
-    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
-    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+    access_key_id: AKIAQ7S3W26GHQ5JWJO6 # Travis repo settings에 설정된 값
+    secret_access_key: gcl3KW05/GKKGMevXS8UYV3lwx45ZcYZ4IHlzEH9 # Travis repo settings에 설정된 값
     bucket: springboot-webservice-deploystudy # 6-3-3에서 생성한 S3 버킷
     key: springboot-webservice-study.zip # 빌드 파일을 압축해서 전달
     bundle_type: zip
