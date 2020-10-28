@@ -47,7 +47,7 @@ deploy:
       repo: louisJu/springboot-webservice #Github 주소
       branch: master
   # CI 실행 완료시 메일로 알람
-  notifications:
-    email:
-      recipients:
-        - devjlouis@gmail.com
+notifications:
+  email:
+    recipients:
+      - devjlouis@gmail.com
