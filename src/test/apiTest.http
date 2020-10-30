@@ -1,0 +1,8 @@
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+{
+  "title": "intell123ij!",
+  "content": "와우gg",
+  "author": "오져따g"
+}
