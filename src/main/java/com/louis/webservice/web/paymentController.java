@@ -1,23 +1,18 @@
 package com.louis.webservice.web;
 
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @AllArgsConstructor
-public class WebController {
+public class paymentController {
 
-    @GetMapping("/")
-    public String main() {
-        return "main";
+    @GetMapping("/payment")
+    public String payment(){
+        return "payment";
     }
-
-    @GetMapping("/leebulCrew")
-    public String crew(){
-        return "crew";
-    }
-
 
 
 }

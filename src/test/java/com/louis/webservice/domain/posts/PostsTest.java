@@ -3,7 +3,9 @@ package com.louis.webservice.domain.posts;
 
 
 
+import com.louis.webservice.etc.Study;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +15,14 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static java.time.LocalDateTime.now;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 class PostsTest {
+
+    Study study;
 
     @Autowired
     PostsRepository postsRepository;
@@ -45,12 +47,17 @@ class PostsTest {
         List<Posts> postsList = postsRepository.findAll();
 
         //then
-        Posts posts = postsList.get(0);
-        assertThat(posts.getTitle(), is("tesTitle"));
+/*        Posts posts = postsList.get(0);
+        assertThat
+        assertThat(posts.getTitle()).("testTitle");
         assertThat(posts.getAuthor(), is("testAuthor"));
         assertTrue(posts.getCreatedDate().isAfter(now));
         assertTrue(posts.getModifiedDate().isAfter(now));
+        assertThat();
+        conta*/
     }
+
+
 
 
 
